@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journal de Trading</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Journal de Trading</h1>
+
+  <!-- Formulaire d'enregistrement des trades -->
+  <form id="tradeForm">
+    <h2>Enregistrer un Trade</h2>
+    <label>Instrument : <input type="text" name="instrument" required></label><br>
+    <label>Prix d'entrée : <input type="number" name="entryPrice" required></label><br>
+    <label>Prix de sortie : <input type="number" name="exitPrice"></label><br>
+    <label>Stop-loss : <input type="number" name="stopLoss"></label><br>
+    <label>Take-profit : <input type="number" name="takeProfit"></label><br>
+    <label>Date : <input type="date" name="tradeDate" required></label><br>
+
+    <h3>Conditions d'Entrée</h3>
+    <div id="conditionsList">
+      <!-- Les conditions prédéfinies ou ajoutées apparaîtront ici -->
+    </div>
+    <button type="button" id="addConditionButton">Ajouter une Condition</button><br>
+
+    <button type="submit">Enregistrer</button>
+  </form>
+
+  <!-- Tableau des trades -->
+  <h2>Journal des Trades</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Instrument</th>
+        <th>Prix d'Entrée</th>
+        <th>Prix de Sortie</th>
+        <th>Stop-loss</th>
+        <th>Take-profit</th>
+        <th>Date</th>
+        <th>Conditions</th>
+      </tr>
+    </thead>
+    <tbody id="tradeTableBody">
+      <!-- Les trades enregistrés apparaîtront ici -->
+    </tbody>
+  </table>
+
+  <!-- Résultats d'analyse -->
+  <button id="analyzeButton">Analyser le Journal</button>
+  <div id="analysisResults"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
